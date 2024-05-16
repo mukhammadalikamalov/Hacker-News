@@ -78,7 +78,7 @@ const HackerNews = () => {
         <>
           <List>
             {data.hits.map((item, index) => (
-              <ListItem key={item.objectID} component="a" href={item.url} button>
+              <ListItem key={item.objectID} component="a" href={item.url} button style={{ marginBottom: '1rem', backgroundColor: '#FFFFFF', borderRadius: '4px' }}>
                 <ListItemText
                   primary={
                     <Typography variant="body1" component="span">
@@ -104,6 +104,9 @@ const HackerNews = () => {
       ) : (
         <p>Loading...</p>
       )}
+      <Typography variant="body2" component="p" style={{ marginTop: '1rem' }}>
+        Source: <a href="https://news.ycombinator.com/">Hacker News</a>
+      </Typography>
     </Container>
   );
 };
